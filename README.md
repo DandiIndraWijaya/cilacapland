@@ -6,7 +6,7 @@ Sumber data untuk proyek ini adalah cilacap.bps.go.id
 - Data yang dipakai: 
     1. Perkebunan dan tanaman pangan yang berada pada kategori Pertanian dan Pertambangan 
     2. Tanaman pangan yang berada pada kategori Pertanian dan Pertambangan
-    3. Luas Lahan menurut Kecamatan yang berada pada kategori Sosial dan Kependudukan sub kategori Geografi.
+    3. Luas wilayah menurut Kecamatan yang berada pada kategori Sosial dan Kependudukan sub kategori Geografi.
 
 1. Data perkebunan:
     1. Luas dan Produksi Kelapa Dalam (2019)
@@ -31,7 +31,7 @@ Sumber data untuk proyek ini adalah cilacap.bps.go.id
     7. Luas dan Produksi Padi Gogo (2018)
     8. Luas dan Produksi Ketela Pohon (2018)
 
-3. Data Jenis lahan
+3. Data Luas Wilayah
     1. Luas Wilayah/Total Area (Km2/Sq. Km). Contoh : 185,06 km2
 -------------------------------------------------------------------------------------------------------------------------------------
 
@@ -40,6 +40,6 @@ Sumber data untuk proyek ini adalah cilacap.bps.go.id
 Misalkan akan input data kecamatan Wanareja :
 1. Buka semua sumber data yang tertulis diatas.
 2. Cari kecamatan Wanareja.
-3. Cari kolom Produksi/Production (Ton).
+3. Cari kolom Produksi/Production (Ton) untuk data perkebunan dan tanaman pangan, cari kolom Luas Wilayah/Total area untuk data luas wilayah.
 4. Lihat data terbaru.
 5. Jika kecamatan Wanareja memproduksi tanaman, maka tuliskan tanaman tersebut pada form di aplikasi admin.
