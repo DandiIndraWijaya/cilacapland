@@ -11,8 +11,6 @@
             <th>Kecamatan</th>
             <th>Tanaman Pangan</th>
             <th>Perkebunan</th>
-            <th>Luas Tanah Sawah</th>
-            <th>Luas Tanah Kering</th>
             <th>Luas Wilayah Kecamatan</th>
             <th>Keterangan</th>
             <th>Aksi</th>
@@ -29,8 +27,6 @@
                     echo "<td>" . $row['nama_kecamatan'] . "</td>";
                     echo "<td>" . $row['tanaman_pangan'] . "</td>";
                     echo "<td>" . $row['perkebunan'] . "</td>";
-                    echo "<td>" . $row['luas_tanah_sawah'] . "</td>";
-                    echo "<td>" . $row['luas_tanah_kering'] . "</td>";
                     echo "<td>" . $row['luas_wilayah_kecamatan'] . "</td>";
                     echo "<td>" . $row['keterangan'] . "</td>";
                     echo "<td><button class='btn btn-primary' ><a style='color:white; text-decoration: none;' href='form_edit_data_lahan.php?id=".$row['id_wilayah_kecamatan']."'>Edit</a></button>

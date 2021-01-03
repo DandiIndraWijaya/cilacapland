@@ -36,7 +36,7 @@ $row = mysqli_fetch_assoc($result);
                     </div>
                     <br>
 
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label>Luas Tanah Sawah</label>
                         <input class="form-control" style="width: 30%;" name="luas_tanah_sawah" value="<?php echo $row['luas_tanah_sawah'];?>">
                     </div>
@@ -46,7 +46,7 @@ $row = mysqli_fetch_assoc($result);
                         <label>Luas Tanah Kering</label>
                         <input class="form-control" style="width: 30%;" name="luas_tanah_kering" value="<?php echo $row['luas_tanah_kering'];?>">
                     </div>
-                    <br>
+                    <br> -->
                     
                     <div class="form-group">
                         <label>Luas Wilayah Kecamatan</label>
