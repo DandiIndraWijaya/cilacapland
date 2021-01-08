@@ -34,11 +34,14 @@ include 'koneksi.php';
     header('Content-Type: text/csv; charset=utf-8');  
       header('Content-Disposition: attachment; filename=data.csv');  
       $output = fopen("php://output", "w");  
-      fputcsv($output, array('Kecamatan', 'Jenis Lahan', 'Tanaman', 'Luas Wilayah Kecamatan', 'Keterangan'));  
-      $query = "SELECT nama_kecamatan, jenis_lahan, tanaman, luas_wilayah_kecamatan, keterangan FROM tata_guna_lahan";  
+      fputcsv($output, array('Kecamatan', 'Tanaman Pangan', 'Perkebunan', 'Luas Wilayah Kecamatan', 'Keterangan'));  
+      $query = "SELECT nama_kecamatan, tanaman_pangan, perkebunan, luas_wilayah_kecamatan, keterangan FROM tata_guna_lahan";  
       $result = mysqli_query($conn, $query);  
       while($row = mysqli_fetch_assoc($result))  
       {  
+           if($row == NULL){
+                $row = '';
+           }
            fputcsv($output, $row);  
       }  
       fclose($output); 

@@ -11,7 +11,7 @@
             <th>Kecamatan</th>
             <th>Tanaman Pangan</th>
             <th>Perkebunan</th>
-            <th>Luas Wilayah Kecamatan</th>
+            <th>Luas Kecamatan (km2)</th>
             <th>Keterangan</th>
             <th>Aksi</th>
         </tr>
