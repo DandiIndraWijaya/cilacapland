@@ -1,12 +1,16 @@
+<?php
+    require_once("koneksi.php");
+    $sql = "select * from artikel";
+    $result = mysqli_query($conn, $sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin cilacapLand</title>
-     <!-- Bootstrap CSS -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -27,20 +31,34 @@
           </div>
         </div>
       </nav>
-    <p>
-        <form method="post" action="export.php" align="center">  
-            <input type="submit" name="export" value="CSV Export" class="btn btn-success" />  
-        </form> 
-    </p>
-
-    <?php
-    include('data_lahan.php');
-    ?>
+    <div class="container">
+        <br><br>
+        <a href='form_artikel.php'>
+        <button class="btn btn-warning" style="color: white">Tambah</button>
+        </a>
+        
+        <br><br>
+        <div class="row">
+        <?php
+            while ($row = mysqli_fetch_assoc($result)){
+        ?>
+            <div class="col-3">
+                <div class="card" style="width: 100%;" style="margin: 5px;">
+                    <img class="card-img-top" src="<?= 'gambar/'. $row['gambar'] ?>" height="250" alt="Card image cap">
+                    <div class="card-body" >
+                        <h5 class="card-title"><?= $row['judul'] ?></h5>
+                        <a href=<?= "artikel_baca.php?id=" . $row['id']; ?> class="btn btn-primary">Baca</a>
+                        <a href=<?= "hapus_artikel.php?id=" . $row['id']; ?> class="btn btn-danger">Hapus</a>
+                    </div>
+                </div>
+            </div>
+        <?php
+            }
+        ?>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-   
 </body>
 </html>
-
-
